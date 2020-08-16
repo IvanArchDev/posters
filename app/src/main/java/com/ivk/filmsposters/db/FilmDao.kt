@@ -1,9 +1,6 @@
 package com.ivk.filmsposters.db
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.ivk.filmsposters.model.Film
 import retrofit2.http.DELETE
 
@@ -15,6 +12,6 @@ interface FilmDao {
     @Query("SELECT * FROM films")
     fun getFilms() : List<Film>
 
-    @DELETE
+    @Query("DELETE FROM films")
     fun clearDb()
 }

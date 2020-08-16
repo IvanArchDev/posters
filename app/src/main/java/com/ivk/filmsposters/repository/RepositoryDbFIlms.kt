@@ -9,6 +9,12 @@ object RepositoryDbFilms {
 
     fun insert(film: Film) = db.filmDao().insertFilm(film)
 
+    fun insertAllFilms(films : List<Film>){
+        films.forEach { film ->
+            db.filmDao().insertFilm(film)
+        }
+    }
+
     fun getFilms() : List<Film> {
         return db.filmDao().getFilms()
     }

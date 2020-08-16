@@ -21,8 +21,8 @@ class FilmsApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        createDb()
         appInstance = this
+        createDb()
     }
 
     private fun createDb(){

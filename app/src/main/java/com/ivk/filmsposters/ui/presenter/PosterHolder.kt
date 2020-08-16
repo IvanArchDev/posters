@@ -1,4 +1,4 @@
-package com.ivk.filmsposters.ui
+package com.ivk.filmsposters.ui.presenter
 
 import android.view.View
 import android.widget.ImageView

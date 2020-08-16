@@ -1,15 +1,15 @@
 package com.ivk.filmsposters.db
 
-import android.content.Context
+import android.app.Application
 import androidx.room.Room
 
 class DataBaseModule {
 
     private val dbName = "films_db"
 
-    fun provideDb(context: Context) : FilmsDb {
+    fun provideDb(application: Application) : FilmsDb {
         return  Room.databaseBuilder<FilmsDb>(
-            context,
+            application,
             FilmsDb::class.java,
             dbName)
             .fallbackToDestructiveMigration()
